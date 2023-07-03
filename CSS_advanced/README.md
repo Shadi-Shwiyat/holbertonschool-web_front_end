@@ -1,0 +1,1 @@
+This project hold the CSS files for a Holberton School front end web dev project
