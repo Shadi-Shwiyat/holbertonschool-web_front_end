@@ -1,0 +1,10 @@
+/* Task 4 using nested classes */
+$text_color: #3D3D3D;
+$red_text: #FF0000;
+
+body {
+    color: $text_color;
+    .red {
+        color: $red_text;
+    }
+}
