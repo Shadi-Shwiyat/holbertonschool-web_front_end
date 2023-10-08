@@ -1,0 +1,7 @@
+/* Task 6 nest hover functionality to button tags */
+button {
+    color: #FF0000;
+    &:hover {
+        color: #00FF00;
+    }
+}
