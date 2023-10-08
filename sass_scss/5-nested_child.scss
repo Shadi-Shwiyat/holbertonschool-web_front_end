@@ -1,0 +1,10 @@
+/* Task 5 uses assigns text color to a nested child of a class selector */
+$text_color: #3D3D3D;
+$red_text: #FF0000;
+
+body {
+    color: $text_color;
+    .red:first-child {
+        color: $red_text;
+    }
+}
