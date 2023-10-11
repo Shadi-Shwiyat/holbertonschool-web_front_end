@@ -28,18 +28,18 @@ In this project we are learning all the various aspects of flexboxes in CSS and 
 1. #### Add new classes on sections
     Using the files from the previous task as the base for this task:
 
-    In the outermost section tag for services
-    - Add the class section-services
-    In the outermost section tag for works
-    - Add the class section-works
-    In the outermost section tag for about
-    - Add the class section-about-us
-    In the outermost section tag for latest_news
-    - Add the class section-latest-news
-    In the outermost section tag for testimonial
-    - Add the class section-testimonial
-    In the outermost section tag for contact
-    - Add the class section-contact
+    - In the outermost section tag for services
+        - Add the class section-services
+    - In the outermost section tag for works
+        - Add the class section-works
+    - In the outermost section tag for about
+        - Add the class section-about-us
+    - In the outermost section tag for latest_news
+        - Add the class section-latest-news
+    - In the outermost section tag for testimonial
+        - Add the class section-testimonial
+    - In the outermost section tag for contact
+        - Add the class section-contact
 2. #### Reverse order Latest news cards
 3. #### Simplify services list
 4. #### Playing around with the spacing between flex service items
