@@ -54,10 +54,19 @@ In this project we are learning all the various aspects of flexboxes in CSS and 
     Before /*** 4. CARD ***/, add a new comment: /* Section Latest news ============================= */
 
     Under that comment section, target the row class inside section-latest-news class
-
     - Property: flex-direction, Value: row-reverse
     The Latest news should appear in a reverse order.
 3. #### Simplify services list
+    Using the files from the previous task for this task:
+
+    flex-wrap is a property that can force the flex items to be in one or multiple lines. Learn more about it here.
+
+    In the Services section of 3-index.html, remove the second ul and put the 3 lielements under the first ul
+
+    Now, in your CSS file, before /*** 4. CARD ***/, add a new comment: /* Section SERVICES ============================= */
+
+    Under that comment section, add a new selector targeting the row class inside the section-services class
+    - Property: flex-wrap, Value: wrap
 4. #### Playing around with the spacing between flex service items
 5. #### Flexify the header
 6. #### Flexify the navbar
