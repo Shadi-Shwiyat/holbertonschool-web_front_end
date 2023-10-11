@@ -234,6 +234,7 @@ In this project we are learning all the various aspects of flexboxes in CSS and 
                     - Rel: tag
                     - Text: UX
     Update 13-styles.css with this information
+
     Add a separator comment 
     /* Post Meta
         ============================= */
@@ -252,6 +253,7 @@ In this project we are learning all the various aspects of flexboxes in CSS and 
     Target the last child of all classes that start with post-meta inside post-meta-list class
     - Property: border, Value: none
     - Property: margin-bottom, Value: 3rem
+
     Add a separator comment 
     /* Tag list
         ============================= */
