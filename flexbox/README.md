@@ -162,6 +162,7 @@ In this project we are learning all the various aspects of flexboxes in CSS and 
     Target the hero-article class
     - Property: background-size, Value: 150rem 100rem
     - Property: background-position, Value: 50% 0
+
     Target the before pseudo element of hero-article class
     - Property: content, Value: empty
     - Property: background, Value: rgba(0, 0, 0, 0.8)
@@ -171,10 +172,12 @@ In this project we are learning all the various aspects of flexboxes in CSS and 
     - Property: left, Value: 0
     - Property: bottom, Value: 0
     - Property: z-index, Value: 0
+
     Target the section-inner class inside the hero-article class
     - Property: text-align, Value: center
     - Property: align-items, Value: center
     - Property: min-height, Value: 40vh
+
     Target the section-body class inside the hero-article class
     - Property: position, Value: relative
     - Property: padding, Value: 7rem 0 0
@@ -194,7 +197,7 @@ In this project we are learning all the various aspects of flexboxes in CSS and 
     In your 12-styles.css:
     - Target the main-article class
         - Property: padding, Value: 5rem 0
-    - Add the below separator comment
+    - Add the below separator comment 
     /* Post
         ============================= */
     - Target the post class
@@ -231,7 +234,7 @@ In this project we are learning all the various aspects of flexboxes in CSS and 
                     - Rel: tag
                     - Text: UX
     Update 13-styles.css with this information
-    Add a separator comment
+    Add a separator comment 
     /* Post Meta
         ============================= */
 
@@ -249,7 +252,7 @@ In this project we are learning all the various aspects of flexboxes in CSS and 
     Target the last child of all classes that start with post-meta inside post-meta-list class
     - Property: border, Value: none
     - Property: margin-bottom, Value: 3rem
-    Add a separator comment
+    Add a separator comment 
     /* Tag list
         ============================= */
 
