@@ -29,28 +29,28 @@ In this project we are learning all the various aspects of flexboxes in CSS and 
     Using the files from the previous task as the base for this task:
 
     In the outermost section tag for services
-        - Add the class section-services
+    - Add the class section-services
     In the outermost section tag for works
-        - Add the class section-works
+    - Add the class section-works
     In the outermost section tag for about
-        - Add the class section-about-us
+    - Add the class section-about-us
     In the outermost section tag for latest_news
-        - Add the class section-latest-news
+    - Add the class section-latest-news
     In the outermost section tag for testimonial
-        - Add the class section-testimonial
+    - Add the class section-testimonial
     In the outermost section tag for contact
-        - Add the class section-contact
-2. Reverse order Latest news cards
-3. Simplify services list
-4. Playing around with the spacing between flex service items
-5. Flexify the header
-6. Flexify the navbar
-7. Align center logo and navbar
-8. Simplify the hero banner
-9. Better alignment about us
-10. Creating an article by fixing issues and updating hero styles
-11. Update the new hero banner
-12. The structure of the main article
-13. The meta list inside the aside section
-14. Add the share social icons
+    - Add the class section-contact
+2. #### Reverse order Latest news cards
+3. #### Simplify services list
+4. #### Playing around with the spacing between flex service items
+5. #### Flexify the header
+6. #### Flexify the navbar
+7. #### Align center logo and navbar
+8. #### Simplify the hero banner
+9. #### Better alignment about us
+10. #### Creating an article by fixing issues and updating hero styles
+11. #### Update the new hero banner
+12. #### The structure of the main article
+13. #### The meta list inside the aside section
+14. #### Add the share social icons
 
