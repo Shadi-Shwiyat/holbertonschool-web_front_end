@@ -114,6 +114,9 @@ In this project we are learning all the various aspects of flexboxes in CSS and 
     - In the variables section
         - Change the value of the variable nav-item-margin to be 0 0 0 2rem
 7. #### Align center logo and navbar
+    Using the files from the previous task for this task:
+
+    In 7-styles.css, inside the /* Header section, in the header-container class selector, set the property align-items to center
 8. #### Simplify the hero banner
 9. #### Better alignment about us
 10. #### Creating an article by fixing issues and updating hero styles
