@@ -46,3 +46,14 @@ In this project we complete several task that get us familiar with using Sass an
 - How to use mixins
 - How to declare extend/inheritance styles
 - How to manipulate operators
+
+## Flexbox
+In this project we are learning all the various aspects of flexboxes in CSS and how to implement them to make beautiful webpages quickly and effeciently
+### Learning Objectives
+- What is Flexbox?
+- How to convert float positioning to a flex display
+- How to horizontally and vertically align elements using Flexbox
+- The difference between the main and cross axes
+- Properties that work on flex elements vs flex container
+- Shorthands for flex
+- How to create a new page with flex in mind
