@@ -70,6 +70,20 @@ In this project we are learning all the various aspects of flexboxes in CSS and 
 4. #### Playing around with the spacing between flex service items
     Using the files from the previous task for this task:
 
+    In 4-styles.css file, within the Grid section
+
+    - In .col-1-3 selector
+        - Replace the current width with calc((100% / 3) - 2rem)
+    - In .col-1-2 selector
+        - Replace the current width with calc((100% / 2) - 2rem)
+    - In [class*='col-']
+        - Remove the padding declaration
+        - Set Property: margin to 1rem
+    - In ul.row declaration
+        - Replace the current margin with -1rem
+5. #### Flexify the header
+    Using the files from the previous task for this task:
+
     In your 5-index.html file, inside the Header section
     - Wrap the div with class header-logo and the nav with class navbar-menu with a div that has header-container as a class
     In your 5-styles.css file,
@@ -88,7 +102,6 @@ In this project we are learning all the various aspects of flexboxes in CSS and 
             - header-logo-link-position
             - header-logo-link-top
             - header-logo-link-left
-5. #### Flexify the header
 6. #### Flexify the navbar
 7. #### Align center logo and navbar
 8. #### Simplify the hero banner
