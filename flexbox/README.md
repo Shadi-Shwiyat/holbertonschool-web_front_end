@@ -162,7 +162,7 @@ In this project we are learning all the various aspects of flexboxes in CSS and 
     Target the hero-article class
     - Property: background-size, Value: 150rem 100rem
     - Property: background-position, Value: 50% 0
-    - Target the before pseudo element of hero-article class
+    Target the before pseudo element of hero-article class
     - Property: content, Value: empty
     - Property: background, Value: rgba(0, 0, 0, 0.8)
     - Property: position, Value: absolute
