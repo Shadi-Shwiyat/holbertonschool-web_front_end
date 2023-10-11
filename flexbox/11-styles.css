@@ -342,7 +342,9 @@
       ============================= */
   
   .section-hero {
+    background-position: 75% 0;
     background-repeat: no-repeat;
+    background-size: 90rem auto;
     background-color: #010101;
     position: relative;
     margin-top: -8.5rem;
@@ -353,7 +355,7 @@
   }
 
   .section-hero .section-category {
-    color: var(--color-white);
+    columns: var(--color-white);
     text-transform: uppercase;
   }
 
