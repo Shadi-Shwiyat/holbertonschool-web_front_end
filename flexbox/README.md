@@ -134,8 +134,136 @@ In this project we are learning all the various aspects of flexboxes in CSS and 
     In 9-styles.css, after the /* Section SERVICES section, create a /* Section ABOUT US section. Inside that new section, target all classes that begin with col- inside section-about-us class
     - Property: align-self, Value: center
 10. #### Creating an article by fixing issues and updating hero styles
-11. #### Update the new hero banner
-12. #### The structure of the main article
-13. #### The meta list inside the aside section
-14. #### Add the share social icons
+    Using the CSS file from the previous task and article.html (provided above in the project description) for this task:
 
+    In 10-styles.css, inside the /* Section HERO section
+
+    After the .section-hero, add a new hero-homepage class selector (you will need to add that class later in your html files)
+
+    Move all declarations inside section-hero inside the new hero-homepage class selector
+
+    Inside section-hero class selector
+    - Property: position, Value: relative
+    - Property: margin-top, Value: -8.5rem
+    Below, target .section-body inside section-hero class
+    - Property: padding, Value: 10rem 4rem
+    Below, target .section-category inside section-hero class
+    - Property: color, Value: point to the variable color-white
+    - Property: text-transform, Value: uppercase
+11. #### Update the new hero banner
+    In 11-article.html in the Hero section
+    - Add the hero-article class on the <header> which is in <main>
+    - Add this background-image (pic-article-02.jpg) as an inline style still on the <header>
+    - Inside the section with section-inner class
+        - Add a span with the class section-category and the text Digital Life
+        - Below, add an h1 with the class section-title and the following text Ut alios omittam, hunc appello, quem ille unum secutus est
+    At the end of 11-styles.css, create a new comment section
+
+    Target the hero-article class
+    - Property: background-size, Value: 150rem 100rem
+    - Property: background-position, Value: 50% 0
+    - Target the before pseudo element of hero-article class
+    - Property: content, Value: empty
+    - Property: background, Value: rgba(0, 0, 0, 0.8)
+    - Property: position, Value: absolute
+    - Property: top, Value: 0
+    - Property: right, Value: 0
+    - Property: left, Value: 0
+    - Property: bottom, Value: 0
+    - Property: z-index, Value: 0
+    Target the section-inner class inside the hero-article class
+    - Property: text-align, Value: center
+    - Property: align-items, Value: center
+    - Property: min-height, Value: 40vh
+    Target the section-body class inside the hero-article class
+    - Property: position, Value: relative
+    - Property: padding, Value: 7rem 0 0
+    - Property: z-index, Value: 2
+12. #### The structure of the main article
+    In your 12-article.html file, in the Hero section
+    - After the header, create a <div>and set its class to main-article (this div will be siblings with the Hero section header)
+    - Create a div inside the main-article div and set the class to container
+    - Create a div with the class post inside the container div
+    - Inside the post div:
+        - Create a new article with the class post-content
+        - Below the post-content article, add the comment <!-- Aside section -->
+        - Sibling to the post-content article and after the comment, create an aside with the class post-aside
+        - Inside post-aside aside, create 2 divs:
+            - The first with the class post-meta
+            - The second with the class post-share
+    In your 12-styles.css:
+    - Target the main-article class
+        - Property: padding, Value: 5rem 0
+    - Add the below separator comment
+    /* Post
+        ============================= */
+    - Target the post class
+        - Property: display, Value: flex
+    - Target the post-content class
+        - Property: width, Value: 100%
+    - Target the post-aside class
+        - Property: order, Value: -1
+        - Property: min-width, Value: 20%
+13. #### The meta list inside the aside section
+    In your 13-article.html
+    - Create an unordered list inside the post-meta div with the classes post-meta-list and row
+        - Create a first <li> with the class post-meta-author
+            - Create the HTML tag that show a stronger importance
+                - Text: Written by:
+            - Create a link
+                - Href: #
+                - Rel: author
+                - Text: William Attaway
+        - Create a second <li> with the class post-meta-date
+            - Create the HTML tag that show a stronger importance
+                - Text: Posted on:
+            - Use the HTML tag for date / time - Datetime: 2019-10 - Text: October 2019
+        - Create a third <li> with the class post-meta-tag
+            - Create the HTML tag that show a stronger importance
+                - Text: Tags:
+            - Create an unordered list with the class tag-list
+                - First <li> contain a link
+                    - Href: #
+                    - Rel: tag
+                    - Text: Web Design
+                - Second <li> contain a link
+                    - Href: #
+                    - Rel: tag
+                    - Text: UX
+    Update 13-styles.css with this information
+    Add a separator comment
+    /* Post Meta
+        ============================= */
+
+    Target the post-meta-list class
+    - Property: flex-direction, Value: column
+    Target the strong tag inside post-meta-list class
+    - Property: color, Value: point to the variable color-primary
+    - Property: font-size, Value: point to the variable font-size-small
+    - Property: text-transform, Value: uppercase
+    - Property: display, Value: block
+    Target all classes that start with post-meta- inside post-meta-list class
+    - Property: margin-bottom, Value: 1rem
+    - Property: padding-bottom, Value: 1rem
+    - Property: border-bottom, Values: 0.2rem solid and point to the color-light-grey variable
+    Target the last child of all classes that start with post-meta inside post-meta-list class
+    - Property: border, Value: none
+    - Property: margin-bottom, Value: 3rem
+    Add a separator comment
+    /* Tag list
+        ============================= */
+
+    Target the tag-list class
+    - Property: padding, Value: 0
+    - Property: list-style, Value: none
+    Target all li inside the tag-list class
+    - Property: display, Value: inline
+    Target the after pseudo element on the li inside tag-list class
+    - Property: content, Value: ", " (space after the comma)
+    Target the after pseudo element of the last-child on the li inside tag-list class
+    - Property: content, Value: empty
+14. #### Add the share social icons
+In your 14-article.html, inside the post-share div
+- Copy paste the social nav list (already existing in the footer) inside
+- Remove the li with Instagram (3rd one)
+- Replace the href in the links with a default value ( #)
