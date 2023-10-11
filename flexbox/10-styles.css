@@ -342,8 +342,6 @@
       ============================= */
   
   .section-hero {
-    background-repeat: no-repeat;
-    background-color: #010101;
     position: relative;
     margin-top: -8.5rem;
   }
