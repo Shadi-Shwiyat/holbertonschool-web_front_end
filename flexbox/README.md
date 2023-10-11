@@ -41,6 +41,22 @@ In this project we are learning all the various aspects of flexboxes in CSS and 
     - In the outermost section tag for contact
         - Add the class section-contact
 2. #### Reverse order Latest news cards
+    Using the files from the previous task for this task:
+
+    The flex-direction property says how flex items are placed on the main axis and their direction (normal or reversed).
+
+    flex-direction is sometimes used when doing responsive design. Some elements may appear better when they are in column mode on mobile and row when on desktop.
+
+    row-reverse and column-reverse should be used in specific situation. The visual order of elements should be the same visually and in the HTML code. Refer to flex-direction - CSS: Cascading Style Sheets | MDN for more information
+
+    In your CSS file:
+
+    Before /*** 4. CARD ***/, add a new comment: /* Section Latest news ============================= */
+
+    Under that comment section, target the row class inside section-latest-news class
+
+    - Property: flex-direction, Value: row-reverse
+    The Latest news should appear in a reverse order.
 3. #### Simplify services list
 4. #### Playing around with the spacing between flex service items
 5. #### Flexify the header
