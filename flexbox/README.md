@@ -118,6 +118,16 @@ In this project we are learning all the various aspects of flexboxes in CSS and 
 
     In 7-styles.css, inside the /* Header section, in the header-container class selector, set the property align-items to center
 8. #### Simplify the hero banner
+    Using the files from the previous task for this task:
+
+    In 8-styles.cssInside the /* Section HERO section
+
+    - In the selector targeting section-inner class in section-hero class, remove the padding and replace with
+        - Property: display, Value: flex
+        - Property: flex-direction, Value: column
+        - Property: align-items, Value: flex-start
+        - Property: justify-content, Value: center
+        - Property: min-height, Value: 50vh
 9. #### Better alignment about us
 10. #### Creating an article by fixing issues and updating hero styles
 11. #### Update the new hero banner
