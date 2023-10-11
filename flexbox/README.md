@@ -68,6 +68,19 @@ In this project we are learning all the various aspects of flexboxes in CSS and 
     Under that comment section, add a new selector targeting the row class inside the section-services class
     - Property: flex-wrap, Value: wrap
 4. #### Playing around with the spacing between flex service items
+    Using the files from the previous task for this task:
+
+    In 4-styles.css file, within the Grid section
+
+    - In .col-1-3 selector
+        - Replace the current width with calc((100% / 3) - 2rem)
+    - In .col-1-2 selector
+        - Replace the current width with calc((100% / 2) - 2rem)
+    - In [class*='col-']
+        - Remove the padding declaration
+        - Set Property: margin to 1rem
+    - In ul.row declaration
+        - Replace the current margin with -1rem
 5. #### Flexify the header
 6. #### Flexify the navbar
 7. #### Align center logo and navbar
