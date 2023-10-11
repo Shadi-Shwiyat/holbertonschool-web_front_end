@@ -11,7 +11,7 @@ In this project we are learning all the various aspects of flexboxes in CSS and 
 - How to create a new page with flex in mind
 
 ## Tasks
-0. Add display flex
+0. #### Add display flex
     Use the starter HTML and CSS files from this task to task 10. Copy the contents of the starter files into the files that you need to produce and make the necessary changes according to the task description.
 
     When using display: flex; on a container, all direct children become flex-items (and no more inline or block elements).
@@ -25,7 +25,7 @@ In this project we are learning all the various aspects of flexboxes in CSS and 
     - Entirely remove the row::after declaration
     - Remove the float: left inside [class*='col-']
     => All elements should appear same than before using the float
-1. Add new classes on sections
+1. #### Add new classes on sections
     Using the files from the previous task as the base for this task:
 
     In the outermost section tag for services
