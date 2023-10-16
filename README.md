@@ -57,3 +57,11 @@ In this project we are learning all the various aspects of flexboxes in CSS and 
 - Properties that work on flex elements vs flex container
 - Shorthands for flex
 - How to create a new page with flex in mind
+
+## Accessibility
+This project is aimed at teaching us the different levels of accessibility and how to implement them into creating an inclusive webpage
+### Learning Objectives
+- ARIA’s main purpose
+- WCAG conformance levels (A, AA and AAA)
+- The importance of Web Accessibility
+- Tools to use for Web Accessibility
