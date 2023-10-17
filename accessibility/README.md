@@ -93,8 +93,22 @@ This project is aimed at teaching us the different levels of accessibility and h
 
     Check with Axe to ensure the issue is fixed.
 5. #### Images must have alternate text
-Taking your code from the previous task, in your fix-a11y/04-index.html file
-- Locate the img that points to the logo.png
-    - Add an alt attribute with the text Name of the logo
-- Locate the img that points to the hero-img.png
-    - Add an empty alt (decorative image)
+    Taking your code from the previous task, in your fix-a11y/04-index.html file
+    - Locate the img that points to the logo.png
+        - Add an alt attribute with the text Name of the logo
+    - Locate the img that points to the hero-img.png
+        - Add an empty alt (decorative image)
+6. #### Form elements must have labels
+    Taking your code from the previous task, in your fix-a11y/05-index.html file, locate the form
+    - Add a label just before the input
+        - Class: visually-hidden
+        - For: email
+    - On the input
+        - Add an id: email
+    Axe tells use that the issue is solved. But actually, some elements should be fixed for better accessibility and usability.
+    - We can change the type from text to email
+    - Add the attribute autocomplete with the value email
+    - Add the required attribute and the aria-required="true"
+    - Change the a to be a button
+    - We can remove the placeholder as it doesn’t add any value
+    We don’t have any error handling in our example, that should exist on the front-end / back-end side.
