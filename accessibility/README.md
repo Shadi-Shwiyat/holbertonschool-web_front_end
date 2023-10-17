@@ -79,3 +79,10 @@ This project is aimed at teaching us the different levels of accessibility and h
 
     Rendering the page should display something like this:
 ![Page_Render](images/6ca4565a4d207b00f718.png)
+3. #### Documents must have <title> element to aid in navigation
+    Taking your code from the previous task, in your fix-a11y/02-index.html file
+
+    Add a title: Homepage - A fake website
+
+    Check with Axe to ensure the issue is fixed
+![homepage_image](images/4c0ba151685ae5b2c801.png)
