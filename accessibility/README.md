@@ -117,3 +117,6 @@ This project is aimed at teaching us the different levels of accessibility and h
     - Locate thefacebook-icon and add an aria-label on the a with the text Facebook
     - Locate the twitter-icon and add an aria-label on the a with the text Twitter
     Links should never be empty, in our case, we are using a font (like Font Awesome) to generate icons.
+8. #### Zooming and scaling must not be disabled
+    In your fix-a11y/07-index.html file
+    Locate the meta viewport and remove user-scalable=no
