@@ -146,3 +146,18 @@ Taking your code from the previous task, in your fix-a11y/08-index.html file
 Fixing wrong headings is not an easy task. Headings represent the outline of your content. Like the table of contents in a book, headings should help to understand what is inside your page.
 
 Always ask yourself if that word or sentence would make sense for anybody visiting your website.
+10. #### Document must have one main landmark
+You can install the Landmarks extension to visually locate the landmarks on your pages.
+
+Taking your code from the previous task, in your fix-a11y/09-index.html file
+- Locate the header class and convert that <div> into a <header> tag (only change the tag, no need to change or remove other attributes in the tag)
+- Convert the <div class='nav'> into a <nav> element (only change the tag, no need to change or remove other attributes in the tag)
+- Wrap everything from the <h1>Homepage</h1> to before the <div class="footer"> in a <main> tag.
+- Locate the footer class and transform the div to a <footer> (only change the tag, no need to change or remove other attributes in the tag)
+- Locate all divs with the section class, and update divs to be <section> (only change the tag, no need to change or remove other attributes in the tag). Except the one with the Projects Completed text. Sections should have headings, we don’t have one anymore.
+If you open the landmarks extension, you should see the landmarks showing.
+
+Tip
+Remember that header, section, footer etc contain a default role (=landmarks).
+
+All automated issues are now solved! You fixed around 50% of accessibility issues. The rest are manual issues, tested using screen-reading tools or just reading the code.
