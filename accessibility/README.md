@@ -32,7 +32,7 @@ This project is aimed at teaching us the different levels of accessibility and h
     Now you use the keyboard to navigate, you should see the card with the title and the dabackground like when you hover the card with your mouse.
 
     All the other elements have a blue outline around.
-1. add the skip-links
+1. #### Add the skip-links
     Using the 00-index.html provided in the previous task, in your skip-links/01-index.html file, just after the <body> HTML open tag
 
     Add the <!-- Skip links --> comment
@@ -70,3 +70,12 @@ This project is aimed at teaching us the different levels of accessibility and h
     - Target the focus state of skip-link class
         - Property: opacity, Value: 1
         - Property: transform, Value: translateY(0)
+2. #### Elements must have sufficient color contrast
+    You are given a fix-a11y/00-index.html starter file:
+
+    As you can see, the contrast is not good. The easy fix is simply to remove the body styles in the embed <style>. Do this in your fix-a11y/01-index.html file. In a real case, you could use the Contrast Ratio section of the Color Picker.
+
+    Check with Axe to ensure the issue is fixed.
+
+    Rendering the page should display something like this:
+![Page_Render](images/6ca4565a4d207b00f718.png)
