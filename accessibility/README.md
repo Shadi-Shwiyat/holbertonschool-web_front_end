@@ -86,3 +86,9 @@ This project is aimed at teaching us the different levels of accessibility and h
 
     Check with Axe to ensure the issue is fixed
 ![homepage_image](images/4c0ba151685ae5b2c801.png)
+4. #### <html> element must have a lang attribute
+    Taking your code from the previous task, in your fix-a11y/03-index.html file
+
+    On the html tag, add the attribute lang with the en value.
+
+    Check with Axe to ensure the issue is fixed.
