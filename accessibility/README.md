@@ -112,3 +112,8 @@ This project is aimed at teaching us the different levels of accessibility and h
     - Change the a to be a button
     - We can remove the placeholder as it doesn’t add any value
     We don’t have any error handling in our example, that should exist on the front-end / back-end side.
+7. #### Links must have discernible text
+    In your fix-a11y/06-index.html file
+    - Locate thefacebook-icon and add an aria-label on the a with the text Facebook
+    - Locate the twitter-icon and add an aria-label on the a with the text Twitter
+    Links should never be empty, in our case, we are using a font (like Font Awesome) to generate icons.
