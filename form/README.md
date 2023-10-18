@@ -40,6 +40,7 @@ This project we learn how to create HTML5 forms, select appropriate input types,
     - Target the section-title class inside the post-comments class
         - Property: font-variant, Value: small-caps
     - Add a new comment section:
+
     /* Basic form
         ============================= */
 
@@ -48,5 +49,7 @@ This project we learn how to create HTML5 forms, select appropriate input types,
         - Property: flex-direction, Value: column
         - Property: padding, Value: 1rem 0
         - Property: margin, Value: 0
+
     Final rendering
+
 ![Final_Render](images/52dd25582638087db16c.png)
