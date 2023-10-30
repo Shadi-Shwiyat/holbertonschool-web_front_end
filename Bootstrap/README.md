@@ -7,7 +7,7 @@ In this project we learn the basics of Bootstrap, a free and open-source CSS fra
 - Usage of Utilities
 ## Tasks
 0. Reboot Styling
-From this HTML:
+    From this HTML:
     "0-index.html"
 
     Add Bootstrap to reset the CSS styling.
