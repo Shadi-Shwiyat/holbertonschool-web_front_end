@@ -76,3 +76,11 @@ This project we learn how to create HTML5 forms, select appropriate input types,
 - How to build a a comment form
 - How to build a simple search form
 - How to create usable and accessible forms
+
+## Bootstrap
+In this project we learn the basics of Bootstrap, a free and open-source CSS framework directed at responsive, mobile-first front-end web development.
+### Learning Objectives
+- Usage of Containers
+- Usage of the Grid system
+- Usage of Components
+- Usage of Utilities
