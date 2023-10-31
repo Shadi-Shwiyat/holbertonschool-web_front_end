@@ -62,7 +62,6 @@ In this project we learn the basics of Bootstrap, a free and open-source CSS fra
     "2-index.html"
 
     Build this responsive web page:
-![Task 2 image](images/2-index.png)
 ![Task 2 gif](images/2-index.gif)
     Requirements:
     - You are not allow to define any styling in a CSS file, in head or inline - only Bootstrap classes
