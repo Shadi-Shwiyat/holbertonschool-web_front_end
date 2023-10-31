@@ -6,6 +6,11 @@ In this project we learn the basics of Bootstrap, a free and open-source CSS fra
 - Usage of Components
 - Usage of Utilities
 ## Tasks
+0. [Reboot Styling](#task-0)
+1. [Blocks](#task-1)
+2. [Table of chemical elements](#task-2)
+3. [Task 3](#task-3)
+
 0. ### Reboot Styling
     From this HTML:
     "0-index.html"
