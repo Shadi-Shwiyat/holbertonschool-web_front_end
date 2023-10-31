@@ -19,11 +19,12 @@ In this project we learn the basics of Bootstrap, a free and open-source CSS fra
     "1-index.html"
 
     Build this responsive web page:
-    ![Task 1 image](images/1-index.gif)
+![Task 1 image](images/1-index.gif)
 
     Requirements:
     - You are not allow to define any styling in a CSS file, in head or inline - only Bootstrap classes
     - You can not change the HTML structure - only adding classes is allowed
+
     Behaviors/styles:
     - For all cells of all rows:
         - Padding at .5rem
@@ -56,4 +57,34 @@ In this project we learn the basics of Bootstrap, a free and open-source CSS fra
         - Each cell has the same width (~16% of the screen)
         - Screen >= 768px: display like 3 columns in one line with the space between the first and middle cell 2 times bigger than the space between the middle cell and the last cell
         - Screen < 768px: display like 3 lines in one column
-2. 
+2. ### Table of chemical elements
+    From this HTML:
+    "2-index.html"
+
+    Build this responsive web page:
+![Task 2 image](images/2-index.png)
+![Task 2 gif](images/2-index.gif)
+    Requirements:
+    - You are not allow to define any styling in a CSS file, in head or inline - only Bootstrap classes
+    - You can not change the HTML structure - only adding classes is allowed
+
+    Behaviors/styles:
+    - Header:
+        - With border bottom
+        - Padding .5rem and margin bottom 1rem
+        - Background color “light”
+        - Horizontal listing, no margin bottom:
+            - First item aligned on the left with a border rounded image
+            - 2 other items aligned on the right with 2 links (aligned vertically in the middle) with a layout of a button of style “secondary”
+            - The link “Chemical elements” is active
+    - The main block has full width, spanning the entire width of the viewport
+    - The first section:
+        - The div inside is an alert of style “info”:
+            - h4 is the header of this alert
+            - The last paragraph (containing the link) should not have any margin bottom
+    - The second section:
+        - h1 has a margin bottom at 1.5rem and margin top at 3rem
+        - Inside the h1, “only 5” has a badge layout of type “info”
+        - The div is able to make the table responsive with a break at 992px
+        - The table has “dark” style and hover on rows
+3. 
