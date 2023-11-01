@@ -6,7 +6,7 @@ In this project we learn the basics of Bootstrap, a free and open-source CSS fra
 - Usage of Components
 - Usage of Utilities
 ## Tasks
-0. ### Reboot Styling
+0. [Reboot Styling](#Reboot_Styling)
 1. [Blocks](#blocks)
 2. [Table of chemical elements](#table-of-chemical-elements)
 3. [Cards](#cards)
@@ -23,7 +23,7 @@ In this project we learn the basics of Bootstrap, a free and open-source CSS fra
     Your final page must look like this:
 ![Task 0 image](images/0b67c90b07246a25d1f8.jpg)
 
-### Blocks {#blocks}
+### Blocks
     From this HTML:
     "1-index.html"
 
