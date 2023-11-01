@@ -7,7 +7,7 @@ In this project we learn the basics of Bootstrap, a free and open-source CSS fra
 - Usage of Utilities
 ## Tasks
 0. [Reboot Styling](#Reboot_Styling)
-1. [Blocks](#blocks)
+1. [Blocks](#Blocks)
 2. [Table of chemical elements](#table-of-chemical-elements)
 3. [Cards](#cards)
 4. [Bob Dylan](#bob-dylan)
