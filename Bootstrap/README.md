@@ -9,7 +9,10 @@ In this project we learn the basics of Bootstrap, a free and open-source CSS fra
 0. [Reboot Styling](#task-0)
 1. [Blocks](#task-1)
 2. [Table of chemical elements](#task-2)
-3. [Task 3](#task-3)
+3. [Cards](#task-3)
+4. [Bob Dylan](#task-4)
+5. [Show/Hide - screen size](#task-5)
+6. [Overwrite CSS](#task-6)
 
 ### Reboot Styling {#task-0}
     From this HTML:
