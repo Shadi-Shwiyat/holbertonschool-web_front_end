@@ -6,7 +6,7 @@ In this project we learn the basics of Bootstrap, a free and open-source CSS fra
 - Usage of Components
 - Usage of Utilities
 ## Tasks
-0. [Reboot Styling](#reboot-styling)
+0. ### Reboot Styling
 1. [Blocks](#blocks)
 2. [Table of chemical elements](#table-of-chemical-elements)
 3. [Cards](#cards)
@@ -14,7 +14,7 @@ In this project we learn the basics of Bootstrap, a free and open-source CSS fra
 5. [Show/Hide - screen size](#show-hide-screen-size)
 6. [Overwrite CSS](#overwrite-css)
 
-### Reboot Styling {#reboot-styling}
+### Reboot Styling
     From this HTML:
     "0-index.html"
 
