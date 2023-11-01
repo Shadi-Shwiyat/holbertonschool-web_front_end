@@ -6,13 +6,13 @@ In this project we learn the basics of Bootstrap, a free and open-source CSS fra
 - Usage of Components
 - Usage of Utilities
 ## Tasks
-0. [Reboot Styling](#Reboot_Styling)
+0. [Reboot Styling](#Reboot-Styling)
 1. [Blocks](#Blocks)
-2. [Table of chemical elements](#table-of-chemical-elements)
-3. [Cards](#cards)
-4. [Bob Dylan](#bob-dylan)
-5. [Show/Hide - screen size](#show-hide-screen-size)
-6. [Overwrite CSS](#overwrite-css)
+2. [Table of chemical elements](#Table-of-chemical-elements)
+3. [Cards](#Cards)
+4. [Bob Dylan](#Bob-dylan)
+5. [Show/Hide - screen size](#task-five)
+6. [Overwrite CSS](#Overwrite-css)
 
 ### Reboot Styling
     From this HTML:
@@ -67,7 +67,7 @@ In this project we learn the basics of Bootstrap, a free and open-source CSS fra
         - Screen >= 768px: display like 3 columns in one line with the space between the first and middle cell 2 times bigger than the space between the middle cell and the last cell
         - Screen < 768px: display like 3 lines in one column
 
-### Table of chemical elements {#table-of-chemical-elements}
+### Table of chemical elements
     From this HTML:
     "2-index.html"
 
@@ -97,7 +97,7 @@ In this project we learn the basics of Bootstrap, a free and open-source CSS fra
         - The div is able to make the table responsive with a break at 992px
         - The table has “dark” style and hover on rows
 
-### Cards {#task-3}
+### Cards
     From this HTML:
     "3-index.html"
 
@@ -122,7 +122,7 @@ In this project we learn the basics of Bootstrap, a free and open-source CSS fra
             - Each items of the form are grouped
             - The final rendering of the form must be the same as the screen (label on the left, color style, etc..)
 
-### Bob Dylan {#task-4}
+### Bob Dylan
     From this HTML:
     "4-index.html"
 
@@ -143,9 +143,9 @@ In this project we learn the basics of Bootstrap, a free and open-source CSS fra
         - The list of discs has a grouped layout
         - Each disc name has a link that extends or collapses description
 
-### Show/Hide - screen size {#task-5}
+### <a name="task-five"></a>Show/Hide - screen size
     From this HTML:
-    "4-index.html"
+    "5-index.html"
 
     Build this responsive web page:
 ![Task 5 gif](images/5-index.gif)
@@ -181,7 +181,7 @@ In this project we learn the basics of Bootstrap, a free and open-source CSS fra
 
 ### Overwrite CSS {#task-6}
     From this HTML:
-    "4-index.html"
+    "6-index.html"
 
     Build this responsive web page:
 ![Task 6 gif](images/6-index.gif)
