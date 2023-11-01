@@ -1,0 +1,45 @@
+.btn, .btn-outline-primary {
+    border-color: #E0003C;
+    color: #E0003C;
+    font-weight: 500!important;
+}
+
+.btn-primary {
+    background-color: #E0003C;
+    color: white;
+}
+
+.btn:hover {
+    background-color: rgb(189, 0, 0);
+    border-color: rgb(189, 0, 0);
+}
+
+button {
+    border-radius: 1rem!important;
+    font-weight: 600!important;
+}
+
+.border-bottom {
+    border-color: #E0003C!important;
+}
+
+.pricing-header {
+    padding-top: 1rem!important;
+}
+
+.card {
+    border-radius: 1rem;
+}
+
+.card-header {
+    background-color: #E0003C;
+    border-radius: 1rem;
+}
+
+.card-header:first-child {
+    border-radius: 1rem 1rem 0 0;
+}
+
+.text-muted {
+    color: #8C8C8C;
+}
