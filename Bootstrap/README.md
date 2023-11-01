@@ -6,15 +6,15 @@ In this project we learn the basics of Bootstrap, a free and open-source CSS fra
 - Usage of Components
 - Usage of Utilities
 ## Tasks
-0. [Reboot Styling](#task-0)
-1. [Blocks](#task-1)
-2. [Table of chemical elements](#task-2)
-3. [Cards](#task-3)
-4. [Bob Dylan](#task-4)
-5. [Show/Hide - screen size](#task-5)
-6. [Overwrite CSS](#task-6)
+0. [Reboot Styling](#reboot-styling)
+1. [Blocks](#blocks)
+2. [Table of chemical elements](#table-of-chemical-elements)
+3. [Cards](#cards)
+4. [Bob Dylan](#bob-dylan)
+5. [Show/Hide - screen size](#show-hide-screen-size)
+6. [Overwrite CSS](#overwrite-css)
 
-### Reboot Styling {#task-0}
+### Reboot Styling {#reboot-styling}
     From this HTML:
     "0-index.html"
 
@@ -23,7 +23,7 @@ In this project we learn the basics of Bootstrap, a free and open-source CSS fra
     Your final page must look like this:
 ![Task 0 image](images/0b67c90b07246a25d1f8.jpg)
 
-### Blocks {#task-1}
+### Blocks {#blocks}
     From this HTML:
     "1-index.html"
 
@@ -67,7 +67,7 @@ In this project we learn the basics of Bootstrap, a free and open-source CSS fra
         - Screen >= 768px: display like 3 columns in one line with the space between the first and middle cell 2 times bigger than the space between the middle cell and the last cell
         - Screen < 768px: display like 3 lines in one column
 
-### Table of chemical elements {#task-2}
+### Table of chemical elements {#table-of-chemical-elements}
     From this HTML:
     "2-index.html"
 
