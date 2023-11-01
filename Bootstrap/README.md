@@ -175,7 +175,7 @@ Behaviors/styles:
     - have light border on the bottom and left
     - have some padding on the 4 directions
 
-### Overwrite CSS {#task-6}
+### Overwrite CSS
 From this HTML:
 "6-index.html"
 
