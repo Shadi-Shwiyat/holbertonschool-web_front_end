@@ -184,6 +184,7 @@ Build this responsive web page:
 Requirements:
 - You are not allow to define any styling in the head or inline of the HTML
 - You can not change the HTML
+
 New styles:
 - btn-primary has as background color set to #E0003C and #BC1340 for hover/focus/active
 - btn-outline-primary has text and border color set to #E0003C
