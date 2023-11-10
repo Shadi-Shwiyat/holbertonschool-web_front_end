@@ -75,3 +75,188 @@ This project we learn how to create HTML5 forms, select appropriate input types,
     Final rendering (same as previously because <legend> tags are hidden by default)
 
 ![Final_Render2](images/52dd25582638087db16c.png)
+2. #### create labels and input container
+    From 02-article.html, create 03-article.html and in the form which is in the comment section:
+    - In the first fieldset
+        - In the first div (which has classes form-group and col-1-2)
+            - Create a label
+                - For: your-first-name
+                - Text: First Name
+            - Sibling to the label, create a <div> with the class form-field
+                - Create a span inside the div with the class form-field-container
+        - In the second div (which has classes form-group and col-1-2)
+            - Create a label
+                - For: your-last-name
+                - Text: Last Name
+            - Sibling to the label, create a <div> with the class form-field
+                - Create a span inside the div with the class form-field-container
+        - In the third div (which has classes form-group and col-2-3)
+            - Create a label
+                - For: your-email
+                - Text: Email
+            - Sibling to the label, create a <div> with the class form-field
+                - Create a span inside the div with the class form-field-container
+    - In the second fieldset
+        - In the first div (which has classes form-group and col-2-3)
+            - Create a label
+                - For: your-title
+                - Text: Title
+            - Sibling to the label, create a <div> with the class form-field
+                - Create a span inside the div with the class form-field-container
+        - In the second div (which has classes form-group and col-2-3)
+            - Create a label
+                - For: your-comment
+                - Text: Comment
+            - Sibling to the label, create a <div> with the class form-field
+                - Create a span inside the div with the class form-field-container
+        - In the third div (which has class form-group)
+            - Create a <button> with the classes button and button-primary
+                - Text: Post my comment
+
+    From 02-styles.css, create 03-styles.css:
+    - Target all label
+        - cursor should be pointer
+        - display as block element
+        - don’t wrap white space
+        - size of font should be 1.4rem
+        - set padding to 0 0 .5rem
+
+    Final rendering
+[task2](images/task2image1.png)
+    Final rendering with button in hover
+[task2img2](images/task2image2.png)
+3. #### create the inputs
+    From 03-article.html, create 04-article.html:
+    - In the first fieldset
+        - In the first span of form-field-container class, create an input
+            - Type: text
+            - Name: your-first-name
+            - Id: your-first-name
+            - Placeholder: e.g. Mike
+            - Pattern: [A-Za-zÀ-ž\s]{3,} (we want to allow all characters with and without accents and spaces. We want to have at least 3 characters to make the input valid)
+            - Max length: 35
+            - Autocomplete is on
+            - Access Key: f
+            - Required: true
+        - In the second span of form-field-container class, create an input
+            - Type: text
+            - Name: your-last-name
+            - Id: your-last-name
+            - Placeholder: e.g. Smith
+            - Pattern: [A-Za-zÀ-ž\s]{3,} (we want to allow all characters with and without accents and spaces. We want to have at least 3 characters to make - the input valid)
+            - Max length: 40
+            - Autocomplete is on
+            - Access Key: l
+            - Required: true
+        - In the third span of form-field-container class, create an input
+            - Type: email
+            - Name: your-email
+            - Id: your-email
+            - Placeholder: e.g. youremail@gmail.com
+            - Pattern: [a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$ (we want to ensure the correct format of the email)
+            - Max length: 55
+            - Autocomplete is on
+            - Access Key: e
+            - Required: true
+    - In the second fieldset
+        - In the first span of form-field-container class, create an input
+            - Type: text
+            - Name: your-title
+            - Id: your-title
+            - Placeholder: e.g. I loved that article
+            - Pattern: [A-Za-zÀ-ž\s]{4,} (we want to allow all characters with and without accents and spaces. We want to have at least 4 characters to make - the input valid)
+            - Max length: 75
+            - Autocomplete is on
+            - Access Key: t
+            - Required: true
+        - In the second span of form-field-container class, create a textarea
+            - Name: your-comment
+            - Id: your-comment
+            - Placeholder: Write your comment here
+            - Minimum length: 10
+            - Access Key: c
+            - Required: true
+            - Columns: 30
+            - Rows: 6
+
+    From 03-styles.css, create 04-styles.css, after the label selector:
+    - Target in one selector all input type text, all input type email, all textarea
+        - Property: position, Value: relative
+        - Property: width, Value: 100%
+        - Property: padding, Value: 1.2rem
+        - Property: line-height, Value: 1
+        - Property: border, Value: .1rem solid point to the variable color-black
+        - Property: background-color, Value: point to the variable color-white
+        - Property: box-shadow, Value: none
+        - Property: outline, Value: 0
+    - Target in one selector all input type text, all input type email
+        - Property: padding-right, Value: 3rem
+    - Target in one selector the focus state of all input type text, the focus state of all input type email, the focus state of all textarea
+        - Property: border, Value: .1rem solid point to the variable color-grey
+        - Property: background-color, Value: point to the color-light-grey
+
+    Final rendering
+[task3image1](images/task3image1.png)
+    Final rendering when “Last name” field is focus
+[task3image2](images/task3image2.png)
+4. #### add help messages
+    From 04-article.html, create 05-article.html:
+    - In each span with form-field-container class that contains an input
+        - After the input add an empty <i> with the class form-field-icon
+    - In the first fieldset
+        - Inside the first div with form-field class, right after the closing span tag, add a paragraph
+            - Class: form-help
+            - Text: First name should be at least 3 characters and only contains letters
+        - Inside the second div with form-field class, right after the closing spantag, add a paragraph
+            - Class: form-help
+            - Text: Last name should be at least 3 characters and only contains letters
+        - Nothing is added in the third form-field
+    - In the second fieldset
+        - Inside the first div with form-field class, right after the closing span tag, add a paragraph
+            - Class: form-help
+            - Text: Title should be at least 4 characters and only contains letters
+        - Inside the second div with form-field class, right after the closing span tag, add a paragraph
+            - Class: form-help
+            - Text: Comment should be at least 10 characters
+
+    From 04-styles.css, create 05-styles.css:
+        - Add a new separation
+        /* Form group
+        ============================= */
+    
+        - Target form-group class
+        - Property: padding, Value: 1rem
+        - Property: margin, Value: 0
+        - Property: background-color, Value: point to the variable color-white
+    
+        - Target the focus-within state of form-group class
+        - Property: background-color, Value: point to the color-light-grey (if it was not done in the previous task)
+        - Property: transition, Value: .3s
+        - Add a new separation
+        /* Form field
+        ============================= */
+    
+        - Target form-field-container class
+        - Property: position, Value: relative
+    
+        - Target form-field-icon class
+        - Property: font-style, Value: normal
+        - Add a new separation
+        /* Form help
+        ============================= */
+
+        - Target form-help class inside form-group class
+        - Property: margin, Value: 0
+        - Property: line-height, Value: 1.3
+        - Property: letter-spacing, Value: .019rem
+        - Property: color, Value: point to the variable color-dark-grey
+        - Property: font-size, Value: point to the variable font-size-small
+        - Property: max-height, Value: 0
+        - Property: transition, Value: .3s
+        - Property: overflow, Value: hidden
+
+        - Target form-help class when form-group class has a focus-within state
+        - Property: max-height, Value: 20rem
+        - Property: margin, Value: .4rem 0 0
+
+    Final rendering when “Last name” is focused

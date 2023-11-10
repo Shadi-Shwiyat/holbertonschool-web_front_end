@@ -84,3 +84,15 @@ In this project we learn the basics of Bootstrap, a free and open-source CSS fra
 - Usage of the Grid system
 - Usage of Components
 - Usage of Utilities
+
+## JavaScript advanced
+This project hones in on mastering JavaScript closures for modular and efficient code. Participants learn to chain closures, simulate private methods, and grasp execution stack order, binding, and callbacks. By project completion, a strong foundation in these advanced concepts is established for creating more resilient and maintainable JavaScript code.
+### Learning Objectives
+- What is lexical scoping in JavaScript
+- What is closure in JavaScript
+- How to use closure
+- How to chain different closures
+- How to simulate private methods with Closure
+- The execution stack order with JavaScript
+- How to use binding
+- How to use callbacks
