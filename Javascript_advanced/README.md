@@ -26,6 +26,7 @@ How to test
 - Copy paste your code
 - Run welcome('Holberton', 'School'); should prompt an alert with this content: Welcome Holberton School!
 - alert(fullName), should return a reference error fullName is not defined
+
 ### Closure Scope Chain
 - Create a variable named globalVariable with value Welcome
 - Create a function outer that:
