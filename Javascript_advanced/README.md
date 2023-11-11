@@ -49,3 +49,31 @@ Compose the code:
 
 Requirements:
 - Running the script should display three popups one by one with the text Welcome, Welcome Holberton, and Welcome Holberton!
+
+### Closure
+Write a function named welcomeMessage:
+- It accepts one argument fullName (string)
+- It should be a closure for an alert displaying Welcome <fullName>
+
+After this function definition, create three variables:- 
+- guillaume contains a call welcomeMessage with Guillaume as argument
+- alex contains a call welcomeMessage with Alex as argument
+- fred contains a call welcomeMessage with Fred as argument
+
+How to test:
+- In your web console, cop/paste your file
+- Executing the following in the console:
+
+```javascript
+guillaume();
+alex();
+fred();
+```
+
+Should display three alerts like below:
+![task2](images/task2.png)
+
+![task2-2](images/task2-2.png)
+
+![task2-3](images/task2-3.png)
+
