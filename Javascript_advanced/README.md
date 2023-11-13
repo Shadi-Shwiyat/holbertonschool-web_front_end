@@ -15,6 +15,7 @@ This project hones in on mastering JavaScript closures for modular and efficient
 2. [Closure](#Closure)
 3. [Closure and loops](#Closure-and-loops)
 4. [Complex Closure](#Complex-Closure)
+5. [Changing DOM with closure](#Changing-DOM-with-closure)
 
 ### Lexical scoping and welcome message
 Create a function named welcome:
@@ -144,4 +145,37 @@ Should display in the console:
 2
 1020
 ```
+
+### Changing DOM with closure
+Create a function named changeMode:
+It accepts 5 arguments size (number), weight (string), transform (string), background (string), color (string)
+Using closure, it changes the style of the entire page and set the font-size, font-weight, text-transform, background-color, and color
+
+Write a function named main:
+Set a variable named spooky that passes the arguments 9, bold, uppercase, pink, green to changeMode
+Set a variable named darkMode that passes the arguments 12, bold, capitalize, black, white to changeMode
+Set a variable named screamMode that passes the arguments 12, normal, lowercase, white, black to changeMode
+Add a paragraph to the body of the page with the text Welcome Holberton!
+Add a button to the body with the text Spooky
+Add a button to the body with the text Dark mode
+Add a button to the body with the text Scream mode
+When clicking on each button, the page CSS should change to the different themes you created previously
+
+Call the main function
+
+Requirements:
+Use vanilla JavaScript to add the elements to the DOM and change the style of the page
+JQuery not allowed!
+
+Clicking the Spooky button should change the web page to look something like this:
+
+![task5](images/task5.png)
+
+Clicking the Dark mode button should change the web page to look something like this:
+
+![task5-1](images/task5-1.png)
+
+Clicking the Scream mode button should change the web page to look something like this:
+
+![task5-2](images/task5-2.png)
 
