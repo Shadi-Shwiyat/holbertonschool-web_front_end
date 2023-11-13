@@ -16,6 +16,8 @@ This project hones in on mastering JavaScript closures for modular and efficient
 3. [Closure and loops](#Closure-and-loops)
 4. [Complex Closure](#Complex-Closure)
 5. [Changing DOM with closure](#Changing-DOM-with-closure)
+6. [Private methods with closure](#Private-methods-with-closure)
+7. [Stack order and setTimeout](#Stack-order-and-setTimeout)
 
 ### Lexical scoping and welcome message
 Create a function named welcome:
@@ -208,3 +210,22 @@ Harry: 4
 Draco: -2
 ```
 
+### Stack order and setTimeout
+Write the following commands in the following order:
+- Log to the console Start of the execution queue
+- Log to the console Final code block to be executed using setTimeout (with delay of 0)
+- Using a loop that iterates 100 times, each iteration logs to the console the iteration number
+- Log to the console End of the loop printing
+
+Requirements:
+- Your code should log to the console the following:
+
+```javascript
+Start of the execution queue
+1
+2
+...
+100
+End of the loop printing
+Final code block to be executed
+```
