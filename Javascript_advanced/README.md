@@ -20,6 +20,7 @@ This project hones in on mastering JavaScript closures for modular and efficient
 7. [Stack order and setTimeout](#Stack-order-and-setTimeout)
 8. [Stack order in functions](#Stack-order-in-functions)
 9. [Prime numbers & timing execution](#Prime-numbers-&-timing-execution)
+10. [Execution stack & timing execution](#Execution-stack-&-timing-execution)
 
 ### Lexical scoping and welcome message
 Create a function named welcome:
@@ -278,3 +279,9 @@ Requirements:
 - Your code should display something in the range of Execution time of printing countPrimeNumbers was 0.2700000002514571 milliseconds.
 
 ### Execution stack & timing execution
+Reuse the function countPrimeNumbers from 9-prime.js (copy/paste)
+- Execute the function countPrimeNumbers 100 times
+- Log to the console the time in milliseconds to execute the function 100 times
+
+Requirements:
+- Your code should display something in the range of Execution time of calculating prime numbers 100 times was 40.865000002551824 milliseconds.
