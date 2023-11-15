@@ -22,6 +22,7 @@ This project hones in on mastering JavaScript closures for modular and efficient
 9. [Prime numbers & timing execution](#Prime-numbers-&-timing-execution)
 10. [Execution stack & timing execution](#Execution-stack-&-timing-execution)
 11. [Changing stack order using setTimeout](#Changing-stack-order-using-setTimeout)
+12. [Binding](#Binding)
 
 ### Lexical scoping and welcome message
 Create a function named welcome:
@@ -296,3 +297,10 @@ Requirements:
 - Your code should display something in the range of Execution time of calculating prime numbers 100 times was 0.03999999910593033 milliseconds.
 - Use setTimeout keyword to change the stack order
 
+### Binding
+Create an object named roomDimensions with the following three attributes:
+- width: 50
+- length: 100
+- getArea: function that returns the surface area of a the object using the width and length
+
+Create a variable named boundGetArea, that will bind the object roomDimensions to the getArea function
