@@ -23,6 +23,8 @@ This project hones in on mastering JavaScript closures for modular and efficient
 10. [Execution stack & timing execution](#Execution-stack-&-timing-execution)
 11. [Changing stack order using setTimeout](#Changing-stack-order-using-setTimeout)
 12. [Binding](#Binding)
+13. [Binding + Closure](#task13)
+14. [Simple callback](#Simple-callback)
 
 ### Lexical scoping and welcome message
 Create a function named welcome:
@@ -304,3 +306,42 @@ Create an object named roomDimensions with the following three attributes:
 - getArea: function that returns the surface area of a the object using the width and length
 
 Create a variable named boundGetArea, that will bind the object roomDimensions to the getArea function
+
+### <a name="task13"></a>Binding + Closure
+Write an object user with the attributes:
+- hobby: Calligraphy
+- favoriteSport: Hockey
+- astrologicalSign: Aries
+- firstName: Buillaume
+- lastName: Ialva
+- location: Telaviv
+- occupation: Engineer
+
+Create a function named logWelcomeUser:
+- It takes one argument welcomeString (String)
+- It logs to the console <welcomeString>, <firstName>. Your occupation is: <occupation>
+
+Create a variable named bindLogWelcomeUser. It binds the logWelcomeUser function to the user object.
+
+Call the function with the string Welcome
+
+Requirements:
+- Calling bindLogWelcomeUser('Hello'); should return Hello, Buillaume. Your occupation is: Engineer
+
+### Simple callback
+Write a new function named createElement:
+- It accepts one argument data (String)
+- It creates a paragraph element
+- The content of the paragraph is set to data
+- It appends to the document body the paragraph
+
+Create a new function named queryWikipedia:
+- It accepts one argument callback (function)
+- Using XMLHttpRequest, it get the article of Stack Overflow with the URL https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=Stack%20Overflow&origin=*
+- Once the fetch is correctly executed, it calls the callback function with the extract of the API response
+
+Call queryWikipedia with createElement as callback
+
+Requirements:
+- Use vanilla javascript to run the Ajax query (no jQuery or other framework)
+- You must not call createElement within queryWikipedia directly
