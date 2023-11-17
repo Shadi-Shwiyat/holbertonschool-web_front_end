@@ -52,3 +52,16 @@ Requirements
 - Make sure your code is in a script of type application/javascript
 
 ### Creating a DOM element
+- In a file 1-index.html, reuse the template you created previously.
+- Remove the code that verifies jQuery loaded and logs messages to the console
+- Create a function named createTextElement:
+    - Within the function, create a p HTML element
+    - The paragraph should display Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in diam risus. Nunc sit amet euismod ipsum. Aenean tempus ex sed est volutpat, sed sodales velit tempus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin auctor sollicitudin eleifend. Vivamus porta enim vitae mauris commodo, vitae tempor tellus elementum. Quisque sed pellentesque nulla, at eleifend nisi. Phasellus eget tincidunt ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    - Add the paragraph to the body of the page
+- Call the createTextElement function
+
+Requirements:
+- You must use jQuery only to generate the HTML tag and attach it to the page
+- Use the keyword append to attach the element to the page
+
+### Creating multiple DOM elements at once
