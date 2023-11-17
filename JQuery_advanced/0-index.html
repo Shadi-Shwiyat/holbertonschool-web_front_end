@@ -6,12 +6,22 @@
         <meta charset="utf-8" />
         <title>Task 0</title>
 
+        <!-- Loading jQuery CDN -->
         <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
 
+        <!-- Logging to console when DOM is fully loaded -->
+        <script type="application/javascript">
+            window.onload = () => {
+                if (window.jQuery) {
+                    console.log('jQuery has been loaded correctly');
+                } else {
+                    conole.log('jQuery has not been loaded correctly');
+                }
+            }
+        </script>
     </head>
 
     <body>
-        <script type=""></script>
     </body>
 
 </html>
