@@ -96,3 +96,14 @@ This project hones in on mastering JavaScript closures for modular and efficient
 - The execution stack order with JavaScript
 - How to use binding
 - How to use callbacks
+
+## jQuery advanced
+Level up your web development expertise by mastering jQuery. Explore CDN integration, dynamic DOM manipulation, click handling, AJAX queries, and pagination. Elevate your skills for creating dynamic, interactive web applications.
+### Learning Objectives
+- Learn how to load jQuery from a CDN in a page
+- Learn the different ways to create DOM elements with jQuery
+- Learn how to modify elements
+- Learn how to add new elements to a page with different positions
+- Learn how to add a click handler on an element
+- Learn how to send GET, POST, DELETE or any type of AJAX query with jQuery
+- Learn how to create a pagination
