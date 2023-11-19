@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Method Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+  <div id="myElement">Initial content</div>
+
+  <script>
+    // Getting HTML content
+    var content = $('#myElement').html();
+    console.log('Initial content:', content);
+
+    // Setting new HTML content
+    $('#myElement').html('<p>New content</p>');
+
+    // Getting HTML content again after setting
+    var newContent = $('#myElement').html();
+    console.log('New content:', newContent);
+  </script>
+
+</body>
+</html>

@@ -104,3 +104,17 @@ The table created by your script should look like this:
 ![task2-image](images/task-2.png)
 
 ### HTML function
+In a file 4-index.html, reuse the template you created in the previous task. Reuse also the function named createFamilyTree.
+- Create a new function replaceFamilyTree:
+    - It should replace the childrens of the tbody elements with a new tr
+    - The tr element should contain two cells with Gerard and Bonissa in each
+- Make sure createFamilyTree and replaceFamilyTree are called
+
+Requirements:
+- You must use the keyword html to replace the content of the table
+
+The table created by your script should look like this
+
+![task4-image](images/task4.png)
+
+### Click attribute and remove function
