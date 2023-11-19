@@ -65,3 +65,24 @@ Requirements:
 - Use the keyword append to attach the element to the page
 
 ### Creating multiple DOM elements at once
+In a file 2-index.html, reuse the template you created previously.
+- Remove the function createTextElement
+- Create a function named createFamilyTree:
+    - It should create a table element
+        - The head of the table should display Firstname and Lastname in two cells
+        - The body of the table should three rows
+        - The first row should contain two cells with Guillaume and Salva
+        - The second row should contain two cells with Paulette and Salva
+        - The third row should contain two cells with Antoine and Salva
+    - Use the keyword append only once to attach all the elements of the table to the page
+- Call the createFamilyTree function
+
+Requirements:
+- You must use jQuery only to generate the HTML tag and attach it to the page
+- The entire table code should be contained in one string
+
+The table created by your script should look like this:
+
+![task2-image](images/task-2.png)
+
+### Chain DOM elements

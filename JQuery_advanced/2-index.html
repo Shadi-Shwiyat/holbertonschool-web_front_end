@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Task 2</title>
+
+        <!-- Loading jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <!-- jQuery Scripting -->
+        <script type="application/javascript">
+            function createFamilyTree() {
+                // Table dimensions
+                let tableWidth = 2;
+                let tableHeight = 4;
+        
+                // Data for first names
+                let firstNames = ['Guillaume', 'Paulette', 'Antoine'];
+        
+                // Create table
+                let table = '<table>';
+        
+                // Create header row
+                table += '<tr>';
+                for (let i = 0; i < tableWidth; i++) {
+                    // Conditional (ternary) operator syntax: (condition ? expression_if_true : expression_if_false)
+                    table += '<th>' + (i === 0 ? 'Firstname' : 'Lastname') + '</th>';
+                }
+                table += '</tr>';
+        
+                // Create data rows
+                for (let i = 0; i < firstNames.length; i++) {
+                    table += '<tr>';
+                    for (let j = 0; j < tableWidth; j++) {
+                        table += '<td>' + (j === 0 ? firstNames[i] : 'Salva') + '</td>';
+                    }
+                    table += '</tr>';
+                }
+        
+                // Close the table
+                table += '</table>';
+        
+                // Append table to the body
+                $('body').append(table);
+            }
+        
+            createFamilyTree();
+        </script>
+    </body>
+</html>
