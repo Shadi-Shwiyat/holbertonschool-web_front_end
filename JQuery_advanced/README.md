@@ -86,3 +86,21 @@ The table created by your script should look like this:
 ![task2-image](images/task-2.png)
 
 ### Chain DOM elements
+In a file 3-index.html, reuse the template you created previously. Reuse also the function named createFamilyTree:
+- The table is containing the exact same values as the previous task
+- This time, create each element one by one
+- Use the keywords append for each element and text for the cells
+- Do not create any intermediate variable
+- Call the createFamilyTree function
+
+Tips:
+- You can append multiple elements at once, by separating the elements with a comma
+
+Requirements:
+- You must use jQuery only to generate the HTML tag and attach it to the page
+
+The table created by your script should look like this:
+
+![task2-image](images/task-2.png)
+
+### HTML function
