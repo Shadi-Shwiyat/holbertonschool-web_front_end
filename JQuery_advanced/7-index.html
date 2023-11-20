@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Task 7</title>
+
+        <!-- Loading jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    </head>
+
+    <body>
+        <!-- jQuery Scripting -->
+        <script type="application/javascript">
+            // Loading function when document is ready
+            $(function() {
+                // Function creates a form used query wikipedia
+                function createSearchForm () {
+                    let form = $('<form>');
+
+                    // Creating and appending search field
+                    let searchInput = $('<input type="text"/>');
+                    searchInput.css('margin-left', '5px');
+                    searchInput.css('margin-right', '5px');
+                    form.append(searchInput);
+
+                    // Creating and appending submit button
+                    let submitButton = $('<input type="submit" value="Submit"/>')
+                    submitButton.css('margin-left', '5px');
+                    submitButton.css('margin-right', '5px');
+                    form.append(submitButton);
+
+                    // Adding on click function for submit button
+                    submitButton.click(() => {
+                        // Clear current list elements in UL
+                        let listToClear = $('ul');
+                        listToClear.empty();
+
+                        // Retrieve values to submit
+                        let searchValue = $('input:nth-of-type(1)').val();
+
+                        // Call the query wikipedia functions and pass in search string
+                        queryWikipedia(searchValue);
+
+                        // Reset the inputs
+                        $('input:nth-of-type(1)').val('');
+
+                        // Prevent the default behaviour of reloading page on form submission
+                        event.preventDefault();
+                    });
+
+                    // Adding empty ul element
+                    let searchResult = $('<ul>');
+                    $('body').append(searchResult);
+
+                    // Append form to top of page
+                    $('body').prepend(form);
+                }
+
+                // Function adds new item to empty search result list
+                function addNewArticle (id, title, snippet) {
+                    // Element to add to ul
+                    let listElement = $('<li>');
+
+                    // Id and title
+                    let paragraph_1 = $('<p>');
+                    let span = $('<span>').text(`${id} - `);
+                    let boldTitle = $('<b>').text(title);
+                    span.append(boldTitle);
+                    paragraph_1.append(span);
+
+                    // Snippit
+                    let paragraph_2 = $('<p>');
+                    paragraph_2.append(snippet);
+                    
+                    // Append paragraphs to list element
+                    listElement.append(paragraph_1);
+                    listElement.append(paragraph_2);
+
+                    // Append new list element to empty UL created in createSearchForm
+                    let unorderedList =  $('ul');
+                    unorderedList.append(listElement);
+                }
+
+                // Function querys wikipedia for a search result
+                function queryWikipedia (search) {
+                    $.ajax({
+                        url: "https://en.wikipedia.org/w/api.php",
+                        data: {
+                            action: 'query',
+                            list: 'search',
+                            srsearch: search,
+                            format: 'json'
+                        },
+                        dataType: 'jsonp',
+                        success: function (data) {
+                            // Loop over all items in array returned by request and call addNewArticle to append them to UL
+                            $.each(data.query.search, function (index, dataItem) {
+                                let id = dataItem.pageid;
+                                let title = dataItem.title;
+                                let snippet = dataItem.snippet;
+
+                                addNewArticle(id, title, snippet);
+                            });
+                        },
+                        error: function (error) {
+                            console.log('Error:', error)
+                        }
+                    });
+                }
+
+                createSearchForm();
+            });
+        </script>
+    </body>
+</html>
