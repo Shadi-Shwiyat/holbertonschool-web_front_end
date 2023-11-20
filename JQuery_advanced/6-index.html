@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Task 6</title>
+
+        <!-- Loading jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <!-- jQuery Scripting -->
+        <script type="application/javascript">
+            // Function appends table with a head and empty body
+            function createFamilyTree () {
+                // Table dimensions
+                let tableWidth = 2;
+
+                // Create table
+                let table = $('<table>');
+                
+                // Create header row
+                let tableHead = $('<thead>');
+                let headerRow = $('<tr>');
+                for (let i = 0; i < tableWidth; i++) {
+                    let cell = $('<th>').text(i === 0 ? 'Firstname' : 'Lastname');
+                    headerRow.append(cell);
+                }
+                tableHead.append(headerRow);
+                table.append(tableHead);
+
+                // Create empty body
+                let tableBody = $('<tbody>');
+                table.append(tableBody);
+
+                // Place table on DOM
+                $('body').append(table);
+            }
+
+            // Function adds a member to table body
+            function addNewMember (firstName, lastName, position) {
+                // Table dimensions
+                let nameWidth = 2;
+                
+                // Appending arguements to body row
+                let bodyRow = $('<tr>');
+                for (let i = 0; i < nameWidth; i++) {
+                    let cell = $('<td>').text(i === 0 ? firstName : lastName);
+                    bodyRow.append(cell);
+                }
+                
+                // Creating 3rd cell with '(x)' to remove the cell
+                let cell = $('<td>').text('(x)');
+                cell.css('background-color', 'orange');
+                cell.click(() => {
+                    bodyRow.remove();
+                });
+                bodyRow.append(cell);
+
+                if (position == 'before') {
+                    // Append new row to start of table body
+                    // let tableStart = $('tbody:first-child');
+                    // tableStart.append(bodyRow);
+
+                    $('tbody').prepend(bodyRow);
+                } else {
+                    // Append new row to end of table body
+                    $('tbody').append(bodyRow);
+                }
+            }
+
+            // Function creates a form used to add data to the table created
+            function createForm () {
+                let form = $('<form>');
+
+                // Creating and appending name inputs
+                let firstNameInput = $('<input type="text" placeholder="First Name"/>');
+                let lastNameInput = $('<input type="text" placeholder="Last Name"/>');
+                firstNameInput.css('margin-left', '5px');
+                firstNameInput.css('margin-right', '5px');
+                lastNameInput.css('margin-left', '5px');
+                lastNameInput.css('margin-right', '5px');
+                form.append(firstNameInput);
+                form.append(lastNameInput);
+
+                // Creating and appending before/after selector
+                let selector = $('<select>');
+
+                let beforeOption = $('<option value="before"/>')
+                beforeOption.text('Before');
+                selector.append(beforeOption);
+
+                let afterOption = $('<option value="after"/>')
+                afterOption.text('After');
+                selector.append(afterOption);
+
+                selector.css('margin-left', '5px');
+                selector.css('margin-right', '5px');
+                form.append(selector);
+
+                // Creating and appending submit button
+                let submitButton = $('<input type="submit" value="Submit"/>')
+                submitButton.css('margin-left', '5px');
+                submitButton.css('margin-right', '5px');
+                form.append(submitButton);
+
+                // Adding on click function for submit button
+                submitButton.click(() => {
+                    // Retrieve values to submit
+                    let firstValue = $('input:nth-of-type(1)').val();
+                    let lastValue = $('input:nth-of-type(2)').val();
+                    let position = $('select option:selected').val();
+
+                    // Call the add new member function and pass values
+                    addNewMember(firstValue, lastValue, position);
+
+                    // Reset the inputs
+                    $('input:nth-of-type(1)').val('');
+                    $('input:nth-of-type(2)').val('');
+                    $('select option:selected').val('before').text('Before');
+
+                    // Prevent the default behaviour of reloading page on form submission
+                    event.preventDefault();
+                });
+
+                // Append form to top of page
+                $('body').prepend(form);
+            }
+
+            createFamilyTree();
+            createForm();
+        </script>
+    </body>
+</html>
