@@ -118,3 +118,31 @@ The table created by your script should look like this
 ![task4-image](images/task4.png)
 
 ### Click attribute and remove function
+In a file 5-index.html, reuse the template you created previously.
+- Remove the createFamilyTree and replaceFamilyTree functions
+- Create a function createFamilyTree:
+    - It should append to the body an empty table, with thead and two cells with text Firstname and Lastname, respectively
+    - It should append an empty tbody element to the table after the thead
+- Create a function addNewMember:
+    - It accepts two arguments firstName(string) and lastName(string)
+    - It appends to the body of the table a new row with three cells
+    - The first cell displays the firstName, the second cell displays the lastName
+    - The third cell displays (x)
+    - On click on the third cell, it should remove the row
+    - Add CSS to the third cell to have an orange background
+- Calls the function createFamilyTree
+- Using addNewMember, generate a fake table with:
+    - the first row Guillaume, Salva
+    - the second row Arielle, Snizt
+    - the third row Fanette, Snizt
+    - the fourth row Gerard, Snizt
+    - the fifth row Victor, Salva
+
+Requirements:
+- You must use the keywords click, css, and remove
+
+The table created by your script should look like this:
+
+![task-5](images/task-5.png)
+
+### <a name="val-before"></a>Val, before, and prepend functions

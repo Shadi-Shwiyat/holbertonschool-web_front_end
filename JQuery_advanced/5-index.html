@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Task 5</title>
+
+        <!-- Loading jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <!-- jQuery Scripting -->
+        <script type="application/javascript">
+            // Function appends table with a head and empty body
+            function createFamilyTree () {
+                // Table dimensions
+                let tableWidth = 2;
+
+                // Create table
+                let table = $('<table>');
+                
+                // Create header row
+                let tableHead = $('<thead>');
+                let headerRow = $('<tr>');
+                for (let i = 0; i < tableWidth; i++) {
+                    let cell = $('<th>').text(i === 0 ? 'Firstname' : 'Lastname');
+                    headerRow.append(cell);
+                }
+                tableHead.append(headerRow);
+                table.append(tableHead);
+
+                // Create empty body
+                let tableBody = $('<tbody>');
+                table.append(tableBody);
+
+                // Place table on DOM
+                $('body').append(table);
+            }
+
+            // Function adds a member to table body
+            function addNewMember (firstName, lastName) {
+                // Table dimensions
+                let nameWidth = 2;
+                
+                // Appending arguements to body row
+                let bodyRow = $('<tr>');
+                for (let i = 0; i < nameWidth; i++) {
+                    let cell = $('<td>').text(i === 0 ? firstName : lastName);
+                    bodyRow.append(cell);
+                }
+                
+                // Creating 3rd cell with '(x)' to remove the cell
+                let cell = $('<td>').text('(x)');
+                cell.css('background-color', 'orange');
+                cell.click(() => {
+                    bodyRow.remove();
+                });
+                bodyRow.append(cell);
+
+                // Append new row to table body
+                $('tbody').append(bodyRow);
+            }
+
+            createFamilyTree();
+            addNewMember('Guillaume', 'Salva');
+            addNewMember('Arielle', 'Snizt');
+            addNewMember('Fanette', 'Snizt');
+            addNewMember('Gerard', 'Snizt');
+            addNewMember('Victor', 'Salva');
+        </script>
+    </body>
+</html>
