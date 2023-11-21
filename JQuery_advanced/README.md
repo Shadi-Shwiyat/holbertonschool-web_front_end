@@ -20,7 +20,7 @@ Level up your web development expertise by mastering jQuery. Explore CDN integra
 6. [Val, before, and prepend functions](#val-before)
 7. [Query - Setup your dev environment](#query-setup)
 8. [Pagination](#Pagination)
-9. [Wrap/unwrap](#Wrap/unwrap)
+9. [Wrap/unwrap](#wrap)
 10. [Another Get API](#Another-Get-API)
 11. [Post query](#Post-query)
 12. [Delete query](#Delete-query)
@@ -236,7 +236,7 @@ The query results should display like this, notice how the 12 is in bold, becaus
 
 ![task-8](images/task8.png)
 
-### Wrap/unwrap
+### <a name="wrap"></a>Wrap/unwrap
 In a file 9-index.html, reuse the code from the previous task
 - In the header, add some CSS, with the style tag:
     - Add a new class named loading
@@ -258,3 +258,94 @@ How the page should look when results are loading
 ![task9](images/task-9.png)
 
 ### Another Get API
+Setup your dev environment
+- Install json-server within your projects using npm:
+- Run the server using node_modules/.bin/json-server --watch db.json
+
+You are provided with this db.json, don’t forget to push it, you can change the values of the id, title, author, postId, name as you like
+
+```json
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "title": "fd",
+      "author": "fffff",
+      "id": 2
+    },
+    {
+      "title": "fd",
+      "author": "fffff",
+      "id": 3
+    },
+    {
+      "title": "f",
+      "author": "f",
+      "id": 4
+    },
+    {
+      "title": "",
+      "author": "",
+      "id": 5
+    },
+    {
+      "title": "",
+      "author": "",
+      "id": 6
+    },
+    {
+      "title": "",
+      "author": "",
+      "id": 7
+    },
+    {
+      "title": "",
+      "author": "",
+      "id": 8
+    },
+    {
+      "title": "",
+      "author": "",
+      "id": 9
+    },
+    {
+      "title": "",
+      "author": "",
+      "id": 10
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
+```
+
+In a file 10-index.html:
+- Reuse your template from the previous task, remove the functions in your script and the style in the head
+- Make sure you import jQuery using the CDN and make sure you can access the ajax methods
+- Create a function addPostRow:
+    - It takes into argument data (object)
+    - It append to the body a paragraph
+    - The paragraph should contain a span element with the text Post created with id ID, title: TITLE, author: AUTHOR
+        - Each variable is contained in the data object
+- Create a function named listPosts:
+    - It should query your local server on the posts endpoint
+    - When the server return a 200 response, it should call the function addPostRow for each element in the response
+    - When the server is unavailable, display an alert with the message Server Error
+- Call the function listPosts when your page loads
+
+Requirements:
+- You must use the get function from jQuery
+
+### Post query
