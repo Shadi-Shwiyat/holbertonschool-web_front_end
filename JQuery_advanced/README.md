@@ -375,3 +375,20 @@ With the JSON server running, your 11-index.html should look something like this
 ![task-11](images/task-11.png)
 
 ### Delete query
+In a file 12-index.html, reuse your code from the previous task
+- Modify the function addPostRow:
+  - Add an id attribute to the paragraph with row-ID (the ID being the one of the post)
+  - Append a span element with the text (delete) to the p, this span should come before the span with the post information
+    - On click, call the function deletePost with the post id
+- Create a function deletePost:
+  - It accepts one argument id(number)
+  - Send a DELETE query to the posts endpoint with the id of the post
+  - If the query is successful, remove the row from the body
+  - If the query is not successful, display an alert with the message Post was not deleted
+
+Requirements:
+- You must use the function remove from jQuery
+
+With your JSON server running, 12-index.html should look like this in your browser, actual rows and values depend on what’s in your db.json:
+
+![task-12](images/task12.png)

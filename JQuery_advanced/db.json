@@ -1,64 +1,18 @@
 {
-    "posts": [
-      {
-        "id": 1,
-        "title": "json-server",
-        "author": "typicode"
-      },
-      {
-        "title": "Holberton",
-        "author": "School",
-        "id": 2
-      },
-      {
-        "title": "fun",
-        "author": "task",
-        "id": 3
-      },
-      {
-        "title": "",
-        "author": "",
-        "id": 4
-      },
-      {
-        "title": "",
-        "author": "",
-        "id": 5
-      },
-      {
-        "title": "",
-        "author": "",
-        "id": 6
-      },
-      {
-        "title": "",
-        "author": "'t",
-        "id": 7
-      },
-      {
-        "title": "",
-        "author": "",
-        "id": 8
-      },
-      {
-        "title": "",
-        "author": "",
-        "id": 9
-      },
-      {
-        "title": "",
-        "author": "",
-        "id": 10
-      }
-    ],
-    "comments": [
-      {
-        "id": 1,
-        "body": "some comment",
-        "postId": 1
-      }
-    ],
-    "profile": {
-      "name": "typicode"
+  "posts": [
+    {
+      "title": "fsdfsdfsd",
+      "author": "fdsafdsfsd",
+      "id": 2
+    },
+    {
+      "title": "fds",
+      "author": "fds",
+      "id": 4
     }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
   }
+}
