@@ -14,7 +14,36 @@
         <script type="application/javascript">
             // Loading function when document is ready
             $(function() {
-                
+                // Adding passed in data to paragraph on body
+                function addPostRow (data) {
+                    // Setting up variables for paragraph with span
+                    let paragraph = $('<p>');
+                    let ID = data.id;
+                    let TITLE = data.title;
+                    let AUTHOR = data.author;
+                    console.log(ID, TITLE, AUTHOR);
+                    let span = $('<span>').text(`Post created with id ${ID}, title: ${TITLE}, author: ${AUTHOR}`);
+
+                    // Appending paragraph to body
+                    paragraph.append(span);
+                    $('body').append(paragraph);
+                }
+
+                // Makes get request to path of posts
+                function listPosts () {
+                    $.get('http://localhost:3000/posts', (data, status) => {
+                        console.log(status);
+                        if (status == 'success') {
+                            $.each(data, (index, dataItem) => {
+                                addPostRow(dataItem);
+                            })
+                        } else {
+                            alert('Server Error');
+                        }
+                    });
+                }
+
+                listPosts();
             });
         </script>
     </body>
