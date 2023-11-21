@@ -205,3 +205,35 @@ Query results should display like this:
 ![task-7-2](images/task7-2.png)
 
 ### Pagination
+Modify the function createSearchForm:
+- It should append to the body another list, with the id pagination
+
+Modify the function queryWikipedia:
+- Add a new parameter named offset(number)
+- By default, the offset should be set to 0
+- Modify the data object to add the offset
+- When you receive the response from the API, call the function buildPagination that you are going to create below
+
+Create a new function named buildPagination:
+- It accepts three arguments numberOfItems(number), itemsPerPage(number), and currentOffset(number)
+- When the function is called, reset the pagination list to an empty tag
+- Write a loop that will display the pagination (using the total number of items divided by the number of items per page)
+- For each page, create a list item
+    - Add some CSS for each item (cursor: 'pointer', 10px margin left, and bold when this is the current page)
+    - The text of the item should be the page number
+    - When clicking on a page number, it should call the function queryWikipedia with the right offset
+
+Requirements:
+- Use the totalhits value from Wikipedia to define the total number of items
+- Display 10 items per page
+- Make sure your pages are displayed in an horizontal line
+
+The form created by your script should look like this:
+
+![task-7](images/task7-1.png)
+
+The query results should display like this, notice how the 12 is in bold, because that is the current page
+
+![task-8](images/task8.png)
+
+### Wrap/unwrap
