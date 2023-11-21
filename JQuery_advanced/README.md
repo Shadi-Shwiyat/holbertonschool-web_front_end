@@ -237,3 +237,24 @@ The query results should display like this, notice how the 12 is in bold, becaus
 ![task-8](images/task8.png)
 
 ### Wrap/unwrap
+In a file 9-index.html, reuse the code from the previous task
+- In the header, add some CSS, with the style tag:
+    - Add a new class named loading
+        - Set the opacity at 0.2 within that class
+- In your script with your other functions, create a function named displayLoading:
+    - It accepts one argument loading
+    - It select the first ul element of the page
+    - If loading is true, it wraps the element with a div tag and the class loading
+    - If loading is false, it unwrap the ul from the div
+- Modify the queryWikipedia function:
+    - It should call the function displayLoading before querying the API
+    - Once the API returns the value, it should remove the opacity by calling the function again
+
+Requirements:
+- You must use the wrap and unwrap functions of Jquery
+
+How the page should look when results are loading
+
+![task9](images/task-9.png)
+
+### Another Get API
