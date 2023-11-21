@@ -121,8 +121,8 @@
                     $('#pagination').empty();
 
                     // Using loop to display pagination
-                    let totalPages = (numberOfItems / itemsPerPage) + 1;
-                    for (let i = 1; i < totalPages; i++) {
+                    let totalPages = Math.ceil(numberOfItems / itemsPerPage);
+                    for (let i = 1; i <= totalPages; i++) {
                         // Creating page numbers
                         let page = $('<li>').text(i);
 
