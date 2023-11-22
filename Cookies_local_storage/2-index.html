@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <style>
+        body {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        h1 {
+            font-size: 43px;
+        }
+        .input {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header and form -->
+    <div class="header-form">
+        <h1><b>Login to the website</b></h1>
+        <form action="" class="form">
+            <input type="text" placeholder="Firstname" class="input" id="firstName">
+            <input type="text" placeholder="Email" class="input" id="email">
+            <button onclick="setCookies(event, 10)" class="input">Log me in</button>
+        </form>
+    </div>
+
+    <!-- Cookies header and button -->
+    <div class="cookies-and-button">
+        <h1><b>Cookies</b></h1>
+        <button type="submit" onclick="showCookies(event)" class="input">Show the cookies</button>
+    </div>
+
+    <!-- Scripting -->
+    <script>
+        // Sets inputted data into cookies
+        function setCookies (event, daysToLive) {
+            // Calculate date for days to live
+            const date = new Date();
+            date.setTime(date.getTime() + (daysToLive * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + date.toUTCString();
+
+            // Prevent page from reloading
+            event.preventDefault();
+
+            // Get values inputted for cookies
+            let firstName = document.getElementById('firstName').value;
+            let email = document.getElementById('email').value;
+
+            // Build cookie object
+            document.cookie = `firstName=${firstName}; ${expires}; path=/`;
+            document.cookie = `email=${email}; ${expires}; path=/`;
+            
+            console.log(document.cookie);
+        }
+
+        // Functions displays cookies on body
+        function showCookies () {
+            // Create <p> element
+            let paragraph = document.createElement('p');
+
+            // Get result from get cookie
+            const firstName = getCookie('firstName');
+            const email = getCookie('email');
+
+            // Set inner html for paragraph
+            paragraph.innerHTML = `Email: ${email} - Firstname: ${firstName}`;
+
+            // Append to body
+            document.body.append(paragraph);
+        }
+
+        // Function gets a cookie passes it to show cookie
+        function getCookie (name) {
+            const cookieDecoded = decodeURIComponent(document.cookie);
+            const cookieArray = cookieDecoded.split ('; ');
+            let result = '';
+
+            cookieArray.forEach(element => {
+                if(element.indexOf(name) == 0) {
+                    result = element.substring(name.length + 1);
+                }
+            });
+
+            return result;
+        }
+        console.log(getCookie('firstName'))
+    </script>
+
+</body>
+</html>
