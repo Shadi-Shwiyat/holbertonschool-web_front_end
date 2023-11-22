@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+    <style>
+        body {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        h1 {
+            font-size: 43px;
+        }
+        .input {
+            margin-left: 5px;
+        }
+        .hide {
+            display: none;
+        }
+        .fw-normal {
+            font-weight: 300;
+        }
+    </style>
+</head>
+<body>
+    <!-- HTML -->
+    <!-- Header and form -->
+    <div>
+        <div class="header-form" id="header-form">
+            <h1><b>Login to the website</b></h1>
+            <form action="" class="form">
+                <input type="text" placeholder="Firstname" class="input" id="firstName">
+                <input type="text" placeholder="Email" class="input" id="email">
+                <button onclick="setCookies(event, 10);showWelcomeMessageOrForm();" class="input">Log me in</button>
+            </form>
+        </div>
+    </div>
+    <!-- Scripting -->
+    <script>
+        // Sets inputted data into cookies
+        function setCookies (event, daysToLive) {
+            // Calculate date for days to live
+            const date = new Date();
+            date.setTime(date.getTime() + (daysToLive * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + date.toUTCString();
+
+            // Prevent page from reloading
+            event.preventDefault();
+
+            // Check if days to live passed in is null
+            if (daysToLive === null) {
+                document.cookie = `firstName=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+                document.cookie = `email=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+                // console.log('you have deleted cookies');
+            } else {
+                // Get values inputted for cookies
+                let firstName = document.getElementById('firstName').value;
+                let email = document.getElementById('email').value;
+
+                // Build cookie object
+                document.cookie = `firstName=${firstName}; ${expires}; path=/`;
+                document.cookie = `email=${email}; ${expires}; path=/`;
+                
+                // console.log(document.cookie);
+            }
+        }
+
+        // Functions displays cookies on body
+        function showCookies () {
+            // Create <p> element
+            let paragraph = document.createElement('p');
+
+            // Get result from get cookie
+            const firstName = getCookie('firstName');
+            const email = getCookie('email');
+
+            // Set inner html for paragraph
+            paragraph.innerHTML = `Email: ${email} - Firstname: ${firstName}`;
+
+            // Append to body
+            document.body.append(paragraph);
+        }
+
+        // Function deletes a cookie by making it expire
+        function deleteCookie () {
+            setCookies(event, null);
+        }
+
+        // Function gets a cookie passes it to show cookie
+        function getCookie (name) {
+            const cookieDecoded = decodeURIComponent(document.cookie);
+            const cookieArray = cookieDecoded.split ('; ');
+            let result = '';
+
+            cookieArray.forEach(element => {
+                if(element.indexOf(name) == 0) {
+                    result = element.substring(name.length + 1);
+                }
+            });
+
+            return result;
+        }
+
+        // Function shows the form div
+        function showForm () {
+            // Retrieve the div
+            let hiddenDIV = document.getElementById('header-form').parentNode;
+
+            // Remove hidden class to parent div
+            hiddenDIV.classList.remove('hide');
+
+            // Remove logout screen
+            let logoutScreen = document.getElementById('welcome');
+            if (logoutScreen) {
+                logoutScreen.remove();
+            }
+        }
+
+        // Function hides the form div
+        function hideForm () {
+            // Retrieve the div
+            let hiddenDIV = document.getElementById('header-form').parentNode;
+
+            // Remove hidden class to parent div
+            hiddenDIV.classList.add('hide');
+        }
+
+        // Function removes two cookies and shows form to create cookies
+        function deleteCookiesAndShowForm () {
+            // Delete cookie
+            deleteCookie();
+
+            // Show form
+            showForm();
+            // console.log('showing form');
+        }
+
+        // Show the login screen
+        function showWelcomeMessageOrForm () {
+            // Retrieve cookies
+            let loginCookie = document.cookie;
+
+            // User is logged in comdition
+            if (loginCookie) {
+                // Get information for header
+                let headerName = getCookie('firstName');
+                let logoutButton = document.createElement('a');
+                logoutButton.innerHTML = '<em class="fw-normal">  (logout)<em>';
+                let headerHTML = `Welcome: ${headerName}`;
+                let header = document.createElement('h1');
+                header.id = 'welcome';
+                header.innerHTML = headerHTML;
+                header.appendChild(logoutButton);
+                // console.log(header);
+
+                // Add on click to logout button
+                logoutButton.onclick = () => {
+                    deleteCookiesAndShowForm();
+                };
+
+                // Apply header to body to override 
+                hideForm();
+                document.body.appendChild(header);
+
+                } else {// THe user is not logged in
+                    showForm();
+                }
+        }
+
+        window.addEventListener('load', function () {
+            showWelcomeMessageOrForm();
+        });
+
+    </script>
+</body>
+</html>
