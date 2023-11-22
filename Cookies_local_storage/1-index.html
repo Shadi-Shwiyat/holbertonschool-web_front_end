@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+    <style>
+        body {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        h1 {
+            font-size: 43px;
+        }
+        .input {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header and form -->
+    <div class="header-form">
+        <h1><b>Login to the website</b></h1>
+        <form action="" class="form">
+            <input type="text" placeholder="Firstname" class="input" id="firstName">
+            <input type="text" placeholder="Email" class="input" id="email">
+            <button onclick="setCookies(event, 10)" class="input">Log me in</button>
+        </form>
+    </div>
+
+    <!-- Cookies header and button -->
+    <div class="cookies-and-button">
+        <h1><b>Cookies</b></h1>
+        <button type="submit" onclick="showCookies(event)" class="input">Show the cookies</button>
+    </div>
+
+    <!-- Scripting -->
+    <script>
+        // Sets inputted data into cookies
+        function setCookies (event, daysToLive) {
+            // Calculate date for days to live
+            const date = new Date();
+            date.setTime(date.getTime() + (daysToLive * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + date.toUTCString();
+
+            // Prevent page from reloading
+            event.preventDefault();
+
+            // Get values inputted for cookies
+            let firstName = document.getElementById('firstName').value;
+            let email = document.getElementById('email').value;
+
+            // Build cookie object
+            document.cookie = `firstName=${firstName}; ${expires}; path=/`;
+            document.cookie = `email=${email}; ${expires}; path=/`;
+            
+            console.log(document.cookie);
+        }
+
+        // Functions displays cookies on body
+        function showCookies () {
+            // Decode cookies
+            const cookieDecoded = decodeURIComponent(document.cookie);
+            const cookieArray = cookieDecoded.split("; ")
+
+            // Create a div element to hold the paragraphs
+            let cookiesDiv = document.createElement('div');
+            cookiesDiv.id = 'cookiesContainer';
+
+            // Empty cookies currently listed
+            let divToEmpty = document.getElementById('cookiesContainer');
+            if (divToEmpty) {
+                divToEmpty.parentNode.removeChild(divToEmpty);
+            }
+
+            // Iterate through the cookieArray
+            cookieArray.forEach(element => {
+                // Create a new <p> element for each key-value pair
+                let paragraph = document.createElement('p');
+                paragraph.innerHTML = element;
+                
+                // Append the <p> element to the div
+                cookiesDiv.appendChild(paragraph);
+                
+                // Add a line break after each <p> element
+                let newLineCookie = document.createElement('br');
+                cookiesDiv.appendChild(newLineCookie);
+            });
+        
+            // Append the div to the body
+            document.body.append(cookiesDiv);
+        }
+    </script>
+
+</body>
+</html>
