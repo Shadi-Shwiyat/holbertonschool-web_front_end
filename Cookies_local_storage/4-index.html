@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+    <style>
+        body {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        h1 {
+            font-size: 43px;
+        }
+        .input {
+            margin-left: 5px;
+        }
+        .hide {
+            display: none;
+        }
+        .fw-normal {
+            font-weight: 300;
+        }
+    </style>
+
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <!-- HTML -->
+    <!-- Header and form -->
+    <div>
+        <div class="header-form" id="header-form">
+            <h1><b>Login to the website</b></h1>
+            <form action="" class="form">
+                <input type="text" placeholder="Firstname" class="input" id="firstName">
+                <input type="text" placeholder="Email" class="input" id="email">
+                <button onclick="setCookiesAndShowWelcomeMessage(event, 10);" class="input">Log me in</button>
+            </form>
+        </div>
+    </div>
+    <!-- Scripting -->
+    <script>
+        // Sets inputted data into cookies using js-cookie and then shows welcome message or form
+        function setCookiesAndShowWelcomeMessage(event, daysToLive) {
+            // Prevent page from reloading
+            event.preventDefault();
+
+            // Check if days to live passed in is null
+            if (daysToLive === null) {
+                Cookies.remove('firstName');
+                Cookies.remove('email');
+                // console.log('you have deleted cookies');
+            } else {
+                // Get values inputted for cookies
+                let firstName = document.getElementById('firstName').value;
+                let email = document.getElementById('email').value;
+
+                // Build cookie object
+                Cookies.set('firstName', firstName, { expires: daysToLive });
+                Cookies.set('email', email, { expires: daysToLive });
+                
+                // console.log(document.cookie);
+            }
+
+            // Show welcome message or form
+            showWelcomeMessageOrForm();
+        }
+
+        // Function shows the form div
+        function showForm() {
+            // Retrieve the div
+            let hiddenDIV = document.getElementById('header-form').parentNode;
+
+            // Remove hidden class to parent div
+            hiddenDIV.classList.remove('hide');
+
+            // Remove logout screen
+            let logoutScreen = document.getElementById('welcome');
+            if (logoutScreen) {
+                logoutScreen.remove();
+            }
+        }
+
+        // Function hides the form div
+        function hideForm() {
+            // Retrieve the div
+            let hiddenDIV = document.getElementById('header-form').parentNode;
+
+            // Remove hidden class to parent div
+            hiddenDIV.classList.add('hide');
+        }
+
+        // Function removes two cookies and shows form to create cookies
+        function deleteCookiesAndShowForm() {
+            // Delete cookies using js-cookie
+            Cookies.remove('firstName');
+            Cookies.remove('email');
+
+            // Show form
+            showForm();
+            // console.log('showing form');
+        }
+
+        // Show the login screen
+        function showWelcomeMessageOrForm() {
+            // User is logged in condition
+            if (Cookies.get('firstName') && Cookies.get('email')) {
+                // Get information for header
+                let headerName = Cookies.get('firstName');
+                let logoutButton = document.createElement('a');
+                logoutButton.innerHTML = '<em class="fw-normal">  (logout)<em>';
+                let headerHTML = `Welcome: ${headerName}`;
+                let header = document.createElement('h1');
+                header.id = 'welcome';
+                header.innerHTML = headerHTML;
+                header.appendChild(logoutButton);
+
+                // Add on click to logout button
+                logoutButton.onclick = () => {
+                    deleteCookiesAndShowForm();
+                };
+
+                // Apply header to body to override 
+                hideForm();
+                document.body.appendChild(header);
+            } else { // The user is not logged in
+                showForm();
+            }
+        }
+
+        window.addEventListener('load', function () {
+            showWelcomeMessageOrForm();
+        });
+
+    </script>
+    <!-- jsDelivr CDN for js-cookie -->
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+</body>
+</html>
